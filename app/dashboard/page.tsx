@@ -1,4 +1,5 @@
 import Sidebar from "./components/Sidebar";
+import BentoGrid from "./components/BentoGrid";
 
 export default function DashboardPage() {
   return (
@@ -10,6 +11,8 @@ export default function DashboardPage() {
           Dashboard
         </h1>
       </main>
+
+      <BentoGrid />
     </div>
   );
 }
