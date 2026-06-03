@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Next-Gen Learning Dashboard
 
-## Getting Started
+A futuristic Student Dashboard built with Next.js, Supabase, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## 🔗 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js (App Router)
+- TypeScript
+- Supabase
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Vercel
+
+---
+
+## 📋 Features
+
+### Layout & UI
+- Dark mode dashboard
+- Bento Grid layout
+- Responsive design
+- Animated Hero Tile
+- Activity Heatmap Tile
+- Dynamic Course Cards
+- Mobile Bottom Navigation
+- Tablet Collapsed Sidebar
+- Desktop Full Sidebar
+
+### Data Integration
+- Courses fetched from Supabase
+- Server Component data fetching
+- Secure environment variables
+- PostgreSQL database
+
+### Animations
+- Staggered page load animations
+- Spring-based hover interactions
+- Animated progress bars
+- Sidebar active indicator using Framer Motion `layoutId`
+
+### Loading & Error States
+- Skeleton loading screen (`loading.tsx`)
+- Database error handling
+- Global route error boundary (`error.tsx`)
+
+---
+
+## 🏗️ Architecture
+
+### Server Components
+
+Course data is fetched on the server using Supabase before rendering the dashboard.
+
+```tsx
+const { data } = await supabase
+  .from("courses")
+  .select("*");
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This reduces client-side work and improves performance.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Client Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Interactive UI elements are implemented as Client Components:
 
-## Learn More
+- Sidebar
+- Mobile Navigation
+- Course Cards
+- Hero Tile
+- Activity Tile
 
-To learn more about Next.js, take a look at the following resources:
+These components use Framer Motion for animations and interactions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🗄️ Supabase Schema
 
-## Deploy on Vercel
+Table: `courses`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Column | Type |
+|----------|----------|
+| id | uuid |
+| title | text |
+| progress | integer |
+| icon_name | text |
+| created_at | timestamp |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Example Row:
+
+| title | progress | icon_name |
+|---------|---------|---------|
+| Advanced React Patterns | 75 | Code |
+| Next.js Fundamentals | 60 | Rocket |
+| UI Motion Design | 90 | Sparkles |
+
+---
+
+## 📱 Responsive Design
+
+### Desktop (>1024px)
+
+- Full sidebar
+- 3-column Bento layout
+
+### Tablet (768px–1024px)
+
+- Sidebar collapsed to icons
+- 2-column layout
+
+### Mobile (<768px)
+
+- Bottom navigation
+- Single-column layout
+- 
+---
+
+## 👨‍💻 Author
+
+Sathya
+
+Frontend Intern Challenge Submission
