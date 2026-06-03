@@ -140,5 +140,6 @@ Steps used:
 ## 👨‍💻 Author
 
 Sathya
+#### 📧 kuttysathya234@gmail.com
 
 Frontend Intern Challenge Submission
