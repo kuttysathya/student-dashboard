@@ -50,7 +50,7 @@ A futuristic Student Dashboard built with Next.js, Supabase, Tailwind CSS, and F
 
 ### Server Components
 
-Course data is fetched on the server using Supabase before rendering the dashboard.
+Course data is fetched using Next.js Server Components (App Router) and Supabase SSR client.
 
 ```tsx
 const { data } = await supabase
@@ -58,7 +58,12 @@ const { data } = await supabase
   .select("*");
 ```
 
-This reduces client-side work and improves performance.
+This ensures:
+- No client-side API calls for initial render
+- Better performance and SEO
+- Secure server-side data handling
+
+---
 
 ### Client Components
 
@@ -86,7 +91,7 @@ Table: `courses`
 | icon_name | text |
 | created_at | timestamp |
 
-Example Row:
+Example Data:
 
 | title | progress | icon_name |
 |---------|---------|---------|
