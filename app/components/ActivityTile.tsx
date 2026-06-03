@@ -5,7 +5,7 @@ export default function ActivityTile() {
     <section className="relative bg-zinc-900 rounded-2xl px-8 py-9.5 min-h-63 border border-zinc-800 overflow-hidden">
       <h3 className="text-sm text-zinc-400 mb-4">Activity</h3>
 
-      <div className="grid grid-cols-7 gap-1.5">
+      <div className="grid grid-cols-7 gap-1.5 justify-items-center place-content-center">
         {days.map((_, i) => {
           const intensity = Math.random();
 
