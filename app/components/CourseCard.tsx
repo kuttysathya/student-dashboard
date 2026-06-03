@@ -70,7 +70,7 @@ export default function CourseCard({
         {/* Timestamp */}
         {created_at && (
           <p className="mt-3 text-xs text-zinc-500">
-            {new Date(created_at).toLocaleDateString()}
+            {new Date(created_at).toISOString().split("T")[0]}
           </p>
         )}
       </div>

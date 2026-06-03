@@ -12,6 +12,12 @@ export default async function DashboardPage() {
   if (error || !data) {
     return <DatabaseErrorUI />;
   }
+  if (!supabase) {
+  throw new Error("Supabase client failed");
+}
+
+  console.log("DATA:", data);
+  console.log("ERROR:", error);
 
   return (
     <div className="flex min-h-screen bg-zinc-950 text-white">
