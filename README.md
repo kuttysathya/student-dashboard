@@ -112,7 +112,29 @@ Example Row:
 
 - Bottom navigation
 - Single-column layout
-- 
+---
+
+## 🚀 Deployment
+
+The project is deployed on Vercel:
+
+👉 Live URL: https://student-dashboard-ui-sigma.vercel.app/dashboard
+
+Steps used:
+1. Push code to GitHub
+2. Import repo into Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy
+
+---
+
+## 📚 What I Learned
+
+- Server Components in Next.js App Router
+- Supabase SSR authentication handling
+- Preventing hydration mismatches in React
+- Building performant UI with Framer Motion
+
 ---
 
 ## 👨‍💻 Author
