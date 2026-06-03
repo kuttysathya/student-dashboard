@@ -9,9 +9,7 @@ export default async function DashboardPage() {
 
   const { data, error } = await supabase.from("courses").select("*");
 
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-
-  if (error) {
+  if (error || !data) {
     return <DatabaseErrorUI />;
   }
 
